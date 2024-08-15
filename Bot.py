@@ -69,7 +69,7 @@ def lets_go(message):
 def okey(message):
     if message.text == "Да" or message.text == 'Нет':
         if message.text == "Да":
-            bot.send_message(message.chat.id, "Хорошо, нажми 'Начать общение', что бы найти собеседника")
+            bot.send_message(message.chat.id, "Хорошо, нажми 'Начать общение', что бы найти собеседника", reply_markup=types.ReplyKeyboardRemove())
         elif message.text == "Нет":
             bot.send_message(message.chat.id, "Хорошо, давай заполним все заново")
             users_list[message.from_user.id].clear()
